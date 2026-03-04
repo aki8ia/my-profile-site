@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ia Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="site-logo">ia Portfolio</a>
+
+      <nav class="site-nav">
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section hero" id="top">
+      <div class="container">
+        <p class="hero-label">Portfolio / Profile</p>
+        <h1 class="hero-title">ia</h1>
+        <p class="hero-lead">
+          ゲーム開発を学びながら、Web制作も勉強中です。
+        </p>
+        <p class="hero-text">
+          ProgateでWeb制作コースを進めながら、ポートフォリオ兼自己紹介サイトを制作しています。
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#works" class="btn btn-primary">作品を見る</a>
+          <a href="#contact" class="btn btn-secondary">連絡先</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+        <p class="section-subtitle">自己紹介</p>
+
+        <div class="card">
+          <p>
+            ゲーム系の専門学校へ進学予定です。ゲーム開発に興味があり、UnityやWeb制作を学習しています。
+          </p>
+          <p>
+            現在は、HTML/CSSの基礎を固めながら、ポートフォリオサイトを作ってアウトプットを増やしています。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-subtitle">使えるもの / 学習中のもの</p>
+
+        <div class="skills-grid">
+          <div class="card skill-group">
+            <h3 class="skill-group-title">Web</h3>
+            <ul class="skill-tags">
+              <li class="skill-tag">HTML</li>
+              <li class="skill-tag">CSS</li>
+              <li class="skill-tag skill-tag-learning">JavaScript（学習予定）</li>
+            </ul>
+          </div>
+
+          <div class="card skill-group">
+            <h3 class="skill-group-title">Tools / Others</h3>
+            <ul class="skill-tags">
+              <li class="skill-tag">VS Code</li>
+              <li class="skill-tag">GitHub（学習中）</li>
+              <li class="skill-tag">Unreal Engine5（学習中）</li>
+              <li class="skill-tag">Unity（学習中）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="works">
+      <div class="container">
+        <h2 class="section-title">Works</h2>
+        <p class="section-subtitle">制作物</p>
+
+        <div class="works-grid">
+          <article class="work-card">
+            <div class="work-card-image"></div>
+            <div class="work-card-body">
+              <h3 class="work-card-title">ポートフォリオサイト（このサイト）</h3>
+              <p class="work-card-desc">
+                HTML/CSSのみで作成した自己紹介兼ポートフォリオサイト。情報整理と見やすさを意識して設計しました。
+              </p>
+              <p class="work-card-meta">HTML / CSS</p>
+              <div class="work-card-links">
+                <a href="#" class="btn btn-secondary">デモ</a>
+                <a href="#" class="btn btn-secondary">GitHub</a>
+              </div>
+            </div>
+          </article>
+          <article class="work-card">
+            <img src="images/worls/This is Game.png" alt="文化祭向けに制作した3Dアクションゲームのパッケージ" class="work-card-image">
+            <div class="work-card-body">
+                <h3 class="work-card-title">文化祭向け3Dアクションゲーム</h3>
+                <p class="work-card-desc">文化祭向けに制作したタイムアタック系の3Dアクションゲームです。
+                    ステージを登ってゴールを目指す構成で、テンポよく遊べるようにリスポーンや進行の分かりやすさを意識して改善しました。</p>
+                <p class="work-card-meta">
+                    Unreal Engine 5/ Blueprint/ レベルデザイン
+                    </p>
+
+                    <div class="work-card-links">
+                    <a href="#" class="btn btn-secondary">焼却</a>
+                    <a href="works-bunkasai.html" class="btn btn-secondary">詳細</a>
+                    </div> 
+                </div>
+          </article>
+          
+          <article class="work-card">
+            <img src="images/worls/タイトル画面.png" alt="UE5ぷちコン応募作品" class="work-card-image">
+            <div class="work-card-body">
+              <h3 class="work-card-title">灯路(とうろ)</h3>
+              <p class="work-card-desc">
+                UE5ぷちコンに応募するために作成、灯りの燃料が切れないよう、自動生成される足場を灯りを頼りに進みその距離を競う横スクロールアクションゲームです
+                スピードアップアイテムや燃料アイテムの処理順を最適化したことが特徴、かなりシンプルなゲームだが、長時間プレイすることができる
+              </p>
+              <p class="work-card-meta">Unreal Engine 5/ Blueprint /ぷちコン</p>
+              <div class="work-card-links">
+                <a href="#" class="btn btn-secondary">準備中</a>
+                <a href="works-ue5-tou.html" class="btn-secondary">詳細</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="work-card-image"></div>
+            <div class="work-card-body">
+              <h3 class="work-card-title">Coming Soon</h3>
+              <p class="work-card-desc">
+                今後追加予定の作品です。学習の進捗に合わせて更新していきます。
+              </p>
+              <p class="work-card-meta">制作予定</p>
+              <div class="work-card-links">
+                <a href="#" class="btn btn-secondary">準備中</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-subtitle">リンク</p>
+
+        <div class="card contact-card">
+          <ul class="contact-list">
+            <li><a href="https://github.com/aki8ia">GitHub</a></li>
+            <li><a href="https://x.com/ia02633833">X</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Studio ia</p>
+    </div>
+  </footer>
+</body>
+</html>
