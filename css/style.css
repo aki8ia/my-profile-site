@@ -408,3 +408,465 @@ a:hover {
     gap: 12px;
   }
 }
+/* =========================
+   Work Detail Page
+   （works-bunkasai-game.html 用）
+   既存の style.css に追記して使う
+========================= */
+
+/* ---------------------------------
+   1) 共通補助（詳細ページ内で使う）
+--------------------------------- */
+.work-detail-section {
+  padding: 64px 0;
+}
+
+.work-detail-section + .work-detail-section {
+  padding-top: 0;
+}
+
+.work-detail-block {
+  margin-top: 24px;
+}
+
+.work-detail-block:first-child {
+  margin-top: 0;
+}
+
+.work-detail-text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--color-text);
+}
+
+.work-detail-text + .work-detail-text {
+  margin-top: 12px;
+}
+
+.work-detail-list {
+  margin: 12px 0 0;
+  padding-left: 20px;
+  color: var(--color-text);
+}
+
+.work-detail-list li {
+  line-height: 1.9;
+}
+
+.work-detail-list li + li {
+  margin-top: 8px;
+}
+
+/* ---------------------------------
+   2) 戻るリンク（パンくず代わり）
+--------------------------------- */
+.work-detail-breadcrumb {
+  margin: 0 0 16px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text-sub);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: var(--color-accent);
+  opacity: 1;
+}
+
+/* ---------------------------------
+   3) Hero（作品タイトル・リード・サムネ）
+--------------------------------- */
+.work-detail-hero {
+  padding: 72px 0 56px;
+}
+
+.work-detail-hero .container {
+  max-width: 920px;
+}
+
+.work-detail-title {
+  margin: 0 0 12px;
+  font-size: 36px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--color-text);
+}
+
+.work-detail-lead {
+  margin: 0 0 20px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--color-text-sub);
+}
+
+.work-detail-thumb-wrap {
+  margin-top: 20px;
+}
+
+.work-detail-thumb {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #e2e8f0;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* 画像の下に短い説明を置きたい場合 */
+.work-detail-thumb-caption {
+  margin: 8px 4px 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--color-text-sub);
+}
+
+/* ---------------------------------
+   4) 本文 + サイド情報の2カラム
+--------------------------------- */
+.work-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.work-detail-main {
+  min-width: 0;
+}
+
+.work-detail-side {
+  min-width: 0;
+}
+
+/* ---------------------------------
+   5) 章ブロック（概要・工夫・課題）
+--------------------------------- */
+.detail-block {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.detail-block + .detail-block {
+  margin-top: 16px;
+}
+
+.detail-block__title {
+  margin: 0 0 12px;
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.detail-block__subtitle {
+  margin: 16px 0 8px;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.detail-block__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--color-text);
+}
+
+.detail-block__text + .detail-block__text {
+  margin-top: 12px;
+}
+
+.detail-block__list {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+.detail-block__list li {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--color-text);
+}
+
+.detail-block__list li + li {
+  margin-top: 8px;
+}
+
+/* ---------------------------------
+   6) 作品情報カード（dl）
+--------------------------------- */
+.info-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.info-card__title {
+  margin: 0 0 12px;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.info-list {
+  margin: 0;
+}
+
+.info-list__row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 10px;
+  padding: 10px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.info-list__row:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.info-list__row:last-child {
+  padding-bottom: 0;
+}
+
+.info-list__term {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: 700;
+  color: var(--color-text-sub);
+}
+
+.info-list__desc {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+/* サイドに補助ボタンを置く場合 */
+.info-card .btn {
+  margin-top: 12px;
+}
+
+/* ---------------------------------
+   7) ギャラリー
+--------------------------------- */
+.work-detail-gallery {
+  padding: 64px 0;
+}
+
+.gallery-header {
+  margin-bottom: 16px;
+}
+
+.gallery-title {
+  margin: 0 0 6px;
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.gallery-subtitle {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--color-text-sub);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.gallery-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.gallery-image {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #e2e8f0;
+}
+
+.gallery-caption {
+  margin: 0;
+  padding: 10px 12px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--color-text-sub);
+  border-top: 1px solid var(--color-border);
+}
+
+/* ---------------------------------
+   8) 下部リンク（戻る / 外部リンク）
+--------------------------------- */
+.work-detail-links {
+  padding: 48px 0 72px;
+}
+
+.work-detail-links .container {
+  max-width: 920px;
+}
+
+.work-detail-links-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.work-detail-links-title {
+  margin: 0 0 12px;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.work-detail-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ---------------------------------
+   9) レスポンシブ（タブレット / スマホ）
+--------------------------------- */
+@media (max-width: 1023px) {
+  .work-detail-title {
+    font-size: 32px;
+  }
+
+  .work-detail-layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* サイド情報カードを上に出したいなら order を使う
+     下に置きたいならこの指定は不要 */
+  /* .work-detail-side {
+    order: -1;
+  } */
+
+  .info-list__row {
+    grid-template-columns: 100px 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .work-detail-section {
+    padding: 48px 0;
+  }
+
+  .work-detail-hero {
+    padding: 56px 0 40px;
+  }
+
+  .work-detail-title {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .work-detail-lead {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .detail-block {
+    padding: 16px;
+  }
+
+  .detail-block__title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .detail-block__subtitle {
+    font-size: 15px;
+    margin-top: 14px;
+    margin-bottom: 6px;
+  }
+
+  .detail-block__text,
+  .detail-block__list li,
+  .work-detail-text {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  .info-card {
+    padding: 16px;
+  }
+
+  .info-card__title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .info-list__row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 8px 0;
+  }
+
+  .info-list__term {
+    font-size: 13px;
+  }
+
+  .info-list__desc {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .gallery-title {
+    font-size: 20px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .work-detail-links {
+    padding: 40px 0 56px;
+  }
+
+  .work-detail-links-card {
+    padding: 16px;
+  }
+
+  .work-detail-links-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .work-detail-links-row {
+    gap: 8px;
+  }
+}
